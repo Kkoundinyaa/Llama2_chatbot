@@ -19,6 +19,7 @@ DATA_PATH = "DATA/"
 
 Next subsequently we also create a path for our vector database where the vectordb is created and is persisted from.
 DB_FAISS_PATH = "vectorstores/db_faiss"
+
 Step-3:
 Now we will convert our data into vectors/embeddings with the help of HuggingFaceEmbeddings which are sentence transformers* in general. Embeddings are essentially vector form of our input data, input data can be of any format text, pictures, etc. The converted embeddings are stored in the vector database and saved locally so that we can persist it later on in our code. 
 db = FAISS.from_documents(texts, embeddings)
@@ -37,6 +38,7 @@ Helpful answer:
 """
   
 We then start writing respective functions for loading the llm, creating the chain, creating the bot and finally one function for llm response.
+
 Step-5:
 In our Smart Knowledge Base we are going to use Llama-2 as our llm but to load the llm in a much easier way we are making use of the CTransformers package in python which helps in loading of the Llama-2 model.
 def load_llm():
